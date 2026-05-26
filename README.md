@@ -1,4 +1,4 @@
-# eBPF RWX Hunter v4.0
+# eBPF Hunter v0.2
 
 > **Linux kernel-level malware detector** — eBPF tracepoint ашиглан in-memory shellcode, fileless execution, reverse shell болон persistence механизмуудыг real-time илрүүлнэ.
 
