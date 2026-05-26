@@ -51,7 +51,7 @@ eBPF Hunter нь **kernel syscall** дээр hook тавьдаг тул:
 
 ```bash
 # 1. Clone
-git clone https://github.com/YOUR_USERNAME/ebpf-hunter.git
+git clone https://github.com/Xermec/ebpf-hunter.git
 cd ebpf-hunter
 
 # 2. Суулгах (Ubuntu/Debian)
