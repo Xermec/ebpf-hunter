@@ -1,4 +1,4 @@
-# eBPF Hunter v0.2
+# eBPF RWX Hunter v4.0
 
 > **Linux kernel-level malware detector** — eBPF tracepoint ашиглан in-memory shellcode, fileless execution, reverse shell болон persistence механизмуудыг real-time илрүүлнэ.
 
@@ -51,7 +51,7 @@ eBPF Hunter нь **kernel syscall** дээр hook тавьдаг тул:
 
 ```bash
 # 1. Clone
-git clone https://github.com/Xermec/ebpf-hunter.git
+git clone https://github.com/YOUR_USERNAME/ebpf-hunter.git
 cd ebpf-hunter
 
 # 2. Суулгах (Ubuntu/Debian)
@@ -78,7 +78,7 @@ Dashboard: **http://localhost:8765**
 
 ---
 
-## Гараар суулгах
+## Гар аар суулгах
 
 ```bash
 # Ubuntu 22.04
@@ -120,16 +120,16 @@ sudo python3 ebpf_rwx_hunter.py --help
 
 ```
 ╔══════════════════════════════════════════════════════════════╗
-║  eBPF Hunter v0.2 — Live Dashboard      ● Холбогдсон         ║
+║  eBPF Hunter v4.0 — Live Dashboard      ● Холбогдсон        ║
 ╠══════════════════════════════════════════════════════════════╣
-║  Нийт: 7    CRITICAL: 2    HIGH: 4    MEDIUM: 1              ║
+║  Нийт: 7    CRITICAL: 2    HIGH: 4    MEDIUM: 1             ║
 ╠══════════════════════════════════════════════════════════════╣
-║  [●RWX] [●MPROTECT] [●EXEC_TMP] [MEMFD_EXEC] [●CONN_C2]      ║ 
-║  [●MEMFD_SCAN] [●PYTHON_INJECT] [●CRON] [●CPU_SPIKE]         ║
+║  [●RWX] [●MPROTECT] [●EXEC_TMP] [MEMFD_EXEC] [●CONN_C2]    ║
+║  [●MEMFD_SCAN] [●PYTHON_INJECT] [●CRON] [●CPU_SPIKE]        ║
 ╠══════════════════════════════════════════════════════════════╣
-║  12:03:15  CRITICAL  RWX          loader(1234)   mmap RWX    ║
-║  12:03:40  HIGH      MPROTECT     mprot(1456)    RW→RWX      ║
-║  12:04:15  HIGH      CONN_C2      bash(1789)     :4444       ║
+║  12:03:15  CRITICAL  RWX          loader(1234)   mmap RWX   ║
+║  12:03:40  HIGH      MPROTECT     mprot(1456)    RW→RWX     ║
+║  12:04:15  HIGH      CONN_C2      bash(1789)     :4444      ║
 ╚══════════════════════════════════════════════════════════════╝
 ```
 
@@ -209,6 +209,13 @@ sudo python3 ebpf_rwx_hunter.py --log /var/log/ebpf_hunter.log
 - EICAR-ыг илрүүлэхгүй (signature-only, RWX operation байхгүй)
 - `systemd` scope-оос ажиллах процессуудад trust хийдэг
 - Production орчинд false-positive тохируулах шаардлагатай (`TRUSTED_SYSTEM_PROCS`)
+
+---
+
+## Гэмт хэргийн хариуцлага
+
+> ⚠️ **Зөвхөн эрдэм шинжилгээ, боловсрол, зөвшөөрөлтэй penetration testing-д хэрэглэнэ.**  
+> Жинхэнэ системд зөвшөөрөлгүй ашиглах нь хууль зөрчих болно.
 
 ---
 
